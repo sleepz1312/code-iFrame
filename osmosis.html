@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="secure_key" content="fe8a6da8766e45981d81cb1f35a47c78">
+    <meta name="token" content="">
+    <meta name="url" content="https://1kubap1syg.execute-api.ap-southeast-1.amazonaws.com/Prod/">
+    <title>Osmosis</title>
+    <link rel="icon" href="/assets/ui-v2/img/favicon.ico?v=1.0.43" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/ui-v2/img/favicon.ico?v=1.0.43" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://futureverse.osmosislearn.com/public/css/app.css" type="text/css" rel="stylesheet">
+    <link href="/assets/ui-v2/css/jquery.datetimepicker.css?v=1.0.43" rel="stylesheet" />
+    <link href="/assets/ui-v2/css/bootstrap-duration-picker.css?v=1.0.43" rel="stylesheet" />
+    <link href="https://futureverse.osmosislearn.com/lib/ckeditor5/build/style.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        .swal-modal:not(.default-swal) {
+            width: 400px !important;
+        }
+
+        @media screen and (max-width: 550px) {
+            .swal-modal:not(.default-swal) {
+                width: 84% !important;
+            }
+        }
+
+        img.h-100.w-100.border {
+            max-height: 96px;
+        }
+
+        @media (min-width: 768px) {
+
+            img.h-100.w-100.border {
+                max-height: 46px;
+            }
+
+        }
+
+        .typeahead_list {
+            padding: 5px;
+            margin-top: 10px;
+            box-shadow: 0 0 2px 0px #000000b5;
+            display: block;
+            z-index: 9999;
+            border-top: 1px solid #D7D7D7;
+            font-size: 16px;
+        }
+
+        .small-email {
+            font-size: 12px;
+            font-weight: lighter;
+        }
+    </style>
+
+    <meta name="description" content="[sample content] Duties and responsibilities of First Aider.">
+    <meta property="og:image" content="https://futureverse.osmosislearn.com/media/default/misc/resized-share.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <style type="text/css">
+        .scrollbar {
+            margin-left: 30px;
+            float: left;
+            height: 300px;
+            width: 65px;
+            background: #F5F5F5;
+            overflow-y: scroll;
+            margin-bottom: 25px;
+        }
+
+        .force-overflow {
+            min-height: 450px;
+        }
+
+        #style-3::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: #F5F5F5;
+        }
+
+        #style-3::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+
+        #style-3::-webkit-scrollbar-thumb {
+            background-color: #8C8581;
+        }
+
+        .player {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            background: #444;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .player img {
+            object-fit: contain;
+        }
+
+        .pl-wrap {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        #pl-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 50px;
+            width: 100%;
+            background: #333;
+            border-top: 1px solid #444;
+        }
+
+        #pl-bar i {
+            height: 100%;
+            width: 40px;
+            border-left: 1px solid #444;
+            line-height: 50px;
+            text-align: center;
+            color: #999;
+            cursor: pointer;
+        }
+
+        #pl-bar i:first-child {
+            border-left: none;
+            border-right: 1px solid #444;
+        }
+
+        #pl-bar i:hover {
+            color: #eaeaea;
+            background: #3b3b3b;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+
+        .btn-circle.btn-lg {
+            width: 50px;
+            height: 50px;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.33;
+            border-radius: 25px;
+        }
+
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            font-size: 24px;
+            line-height: 1.33;
+            border-radius: 35px;
+        }
+
+        .explore-smltext span {
+            font-size: 13px !important;
+        }
+
+        .bookmark:not(.no-click) {}
+
+        div#intent_description,
+        p#intent_description {
+            word-break: break-word !important;
+        }
+
+        .htmlIframe {
+            margin-bottom: 37px !important;
+        }
+
+        .swal-modal:not(.default-swal) {
+            width: 370px !important;
+        }
+
+        .swal-accessed {
+            min-height: 125px !important;
+        }
+
+        .asset_iterations_btn #Fill-1 {
+            fill: var(--theme1) !important;
+        }
+
+        .asset_iterations_btn #Fill-3 {
+            fill: white !important;
+        }
+
+        .asset_iterations_btn.active #Fill-1 {
+            fill: white !important;
+        }
+
+        .asset_iterations_btn.active #Fill-3 {
+            fill: var(--theme1) !important;
+        }
+
+        @media only screen and (max-width: 880px) {
+            .bab_0321_singleasset_tab1.usrr-prfl {
+                display: block !important;
+            }
+        }
+
+        .google_ads_div {
+            text-align: center;
+            margin: auto;
+            border-top: 1px solid #e6e1e1;
+            border-bottom: 1px solid #e6e1e1;
+            padding-top: 14px;
+            padding-bottom: 26px;
+        }
+
+        .google_ads_spacing {
+            background-color: white;
+            height: 26px;
+        }
+
+        .google_ads_heading {
+            color: silver;
+            font-size: 15px;
+        }
+    </style>
+    <style>
+        .bab_0321_singleasset_tab1.ctg p,
+        .bab_0321_singleasset_tab1.detail p {
+            text-transform: none !important;
+        }
+    </style>
+</head>
+
+<body class="bg-light" theme="brown">
+    <div id="app">
+        <auth
+            logo="https://d44u8sowget4w.cloudfront.net/ODc/settings/logo/87 - Simulation Pod1645064099-osmosislearn maroon logo.png?"
+            google_url="https://accounts.google.com/o/oauth2/auth?response_type=code&amp;access_type=online&amp;client_id=225385732119-0nhjcaj7h9bodhlfmhljlulacjcdj65k.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fosmosislearn.com%2Foauth%2Fredirect&amp;state&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;prompt=consent"
+            google_logo="https://futureverse.osmosislearn.com/media/default/logo/google-logo.png"
+            pod_reg_amount="$ 0.00 per month including taxes" disable_close_button="0" open_signup_status=""
+            terms_and_condition_page=/osmosis-subscription-terms></auth>
+        <header class="bg-white">
+            <div class="bab_0321_header container pd0 header_containerq">
+                <nav class="bab_0321_header navbar navbar-expand-lg navbar-light">
+                    <div class="bab_0321_header logo">
+
+                        <a class="bab_0321_header navbar-brand" style="cursor: default" href=""><img
+                                src="https://d44u8sowget4w.cloudfront.net/ODc/settings/logo/87 - Simulation Pod1645064099-osmosislearn maroon logo.png?"
+                                alt="pod-logo" /></a>
+                    </div>
+                    <button class="bab_0321_header navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="bab_0321_header navbar-toggler-icon"></span>
+                    </button>
+                    <div class="bab_0321_header_fl-rgt">
+                        <form id="global_search_form" class="d-inline"
+                            action="https://futureverse.osmosislearn.com/global_search" method="GET">
+                            <div class="bab_0321_header search">
+                                <input placeholder="Search for anything and hit enter" name="search_key" value=""
+                                    data-query_url="true" class="global_search_input" />
+                                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="website-style-guide" transform="translate(-505.000000, -2295.000000)">
+                                            <g id="IC/30/search" transform="translate(500.000000, 2290.000000)">
+                                                <rect id="Rectangle" x="0" y="0" width="30" height="30"></rect>
+                                                <path
+                                                    d="M12.433,17.579 C9.586,17.579 7.287,15.281 7.287,12.433 C7.287,9.586 9.586,7.287 12.433,7.287 C15.28,7.287 17.579,9.586 17.579,12.433 C17.579,15.281 15.28,17.579 12.433,17.579 L12.433,17.579 Z M19.294,17.579 L18.391,17.579 L18.07,17.27 C19.191,15.967 19.866,14.274 19.866,12.433 C19.866,8.328 16.538,5 12.433,5 C8.328,5 5,8.328 5,12.433 C5,16.538 8.328,19.866 12.433,19.866 C14.274,19.866 15.966,19.191 17.27,18.071 L17.579,18.391 L17.579,19.294 L23.296,25 L25,23.297 L19.294,17.579 Z"
+                                                    id="Fill-1"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </form>
+                        <div class="bab_0321_header collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="bab_0321_header navbar-nav ml-auto">
+                                <li class="bab_0321_header nav-item  hv">
+                                    <a class="bab_0321_header nav-link  " href="
+                                https://futureverse.osmosislearn.com/explore/assets">Explore
+                                        <span class="bab_0321_header sr-only">(current)</span></a>
+
+                                </li>
+                                <li class="bab_0321_header nav-item hv ">
+                                    <a class="bab_0321_header nav-link " href="javascript:void(0);" data-toggle="modal"
+                                        data-target="#auth_modal">Create</a>
+                                </li>
+                                <li class="bab_0321_header nav-item hv ">
+                                    <a class="bab_0321_header nav-link "
+                                        href="https://futureverse.osmosislearn.com/events/explore">Events</a>
+                                </li>
+                                <login-nav-button></login-nav-button>
+                                <signup-nav-button></signup-nav-button>
+                            </ul>
+                        </div>
+                        <div class="bab_0321_header collapse navbar-collapse">
+                            <ul class="bab_0321_header navbar-nav ml-auto">
+                                <li class="bab_0321_header nav-item hv ">
+                                    <a class="bab_0321_header nav-link " href="
+                                https://futureverse.osmosislearn.com/explore/assets">Explore
+                                        <span class="bab_0321_header sr-only">(current)</span></a>
+                                </li>
+                                <li class="bab_0321_header nav-item  hv">
+                                    <a class="bab_0321_header nav-link " href="javascript:void(0);" data-toggle="modal"
+                                        data-target="#auth_modal">Create</a>
+                                </li>
+                                <li class="bab_0321_header nav-item hv ">
+                                    <a class="bab_0321_header nav-link "
+                                        href="https://futureverse.osmosislearn.com/events/explore">Events</a>
+                                </li>
+                                <login-nav-button></login-nav-button>
+                                <signup-nav-button></signup-nav-button>
+                            </ul>
+                        </div>
+                    </div>
+                    <user-payment-popup
+                        logo="https://d44u8sowget4w.cloudfront.net/ODc/settings/logo/87 - Simulation Pod1645064099-osmosislearn maroon logo.png?"
+                        google_logo="https://futureverse.osmosislearn.com/media/default/logo/google-logo.png"
+                        pod_reg_amount="$ 0.00 per month including taxes"
+                        terms_and_condition_page=/osmosis-subscription-terms></user-payment-popup>
+
+                    <form id="global_search_form_mobile" class="d-inline"
+                        action="https://futureverse.osmosislearn.com/global_search" method="GET">
+                        <div class="bab_0321_header search-mbb position-relative">
+                            <input placeholder="Search for anything and hit enter" name="search_key" value=""
+                                data-query_url="true" class="global_search_input" />
+                            <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g id="website-style-guide" transform="translate(-505.000000, -2295.000000)">
+                                        <g id="IC/30/search" transform="translate(500.000000, 2290.000000)">
+                                            <rect id="Rectangle" x="0" y="0" width="30" height="30"></rect>
+                                            <path
+                                                d="M12.433,17.579 C9.586,17.579 7.287,15.281 7.287,12.433 C7.287,9.586 9.586,7.287 12.433,7.287 C15.28,7.287 17.579,9.586 17.579,12.433 C17.579,15.281 15.28,17.579 12.433,17.579 L12.433,17.579 Z M19.294,17.579 L18.391,17.579 L18.07,17.27 C19.191,15.967 19.866,14.274 19.866,12.433 C19.866,8.328 16.538,5 12.433,5 C8.328,5 5,8.328 5,12.433 C5,16.538 8.328,19.866 12.433,19.866 C14.274,19.866 15.966,19.191 17.27,18.071 L17.579,18.391 L17.579,19.294 L23.296,25 L25,23.297 L19.294,17.579 Z"
+                                                id="Fill-1"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </form>
+                    <!-- <input placeholder="Search for anything and hit enter" /> -->
+                    <!-- <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="website-style-guide" transform="translate(-505.000000, -2295.000000)">
+            <g id="IC/30/search" transform="translate(500.000000, 2290.000000)">
+                <rect id="Rectangle" x="0" y="0" width="30" height="30"></rect>
+                <path
+                    d="M12.433,17.579 C9.586,17.579 7.287,15.281 7.287,12.433 C7.287,9.586 9.586,7.287 12.433,7.287 C15.28,7.287 17.579,9.586 17.579,12.433 C17.579,15.281 15.28,17.579 12.433,17.579 L12.433,17.579 Z M19.294,17.579 L18.391,17.579 L18.07,17.27 C19.191,15.967 19.866,14.274 19.866,12.433 C19.866,8.328 16.538,5 12.433,5 C8.328,5 5,8.328 5,12.433 C5,16.538 8.328,19.866 12.433,19.866 C14.274,19.866 15.966,19.191 17.27,18.071 L17.579,18.391 L17.579,19.294 L23.296,25 L25,23.297 L19.294,17.579 Z"
+                    id="Fill-1"></path>
+            </g>
+        </g>
+    </g>
+</svg> -->
+
+                </nav>
+            </div>
+            <div class="modal fade broadcastPopup" id="broadcastPopup" style="z-index: 999999;">
+                <div class="modal-dialog" style="min-width: 80%;">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Broadcast Message</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="form_edit_box popup_form_edit_box">
+                                <div class="notify_message">
+                                    <p class="errormsg" style="color:red"></p>
+                                </div>
+                                <form action="https://futureverse.osmosislearn.com/notification/insertbroadcast"
+                                    id="broadcast_form" autocomplte="on" enctype="multipart/form-data" method="post"
+                                    accept-charset="utf-8" class="form-inline">
+                                    <input type="hidden" name="secure_key" value="fe8a6da8766e45981d81cb1f35a47c78">
+                                    <div class="row">
+                                        <div class="col-sm-12 mb-3">
+                                            <div class="form-group">
+                                                <div class="col-sm-2 form_label text-uppercase required"
+                                                    style="text-align:left;">
+                                                    Subject
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="subject" value=""
+                                                        class="form-control required" style="width:100%;"
+                                                        id="broadcast_title" />
+
+                                                    <div>
+                                                        <span id="broadcast_title_error" class="required_star"
+                                                            style="color: red;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mb-3">
+                                            <div class="form-group">
+                                                <div class="col-sm-2 form_label text-uppercase required">
+                                                    Broadcast Type
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <span>
+                                                        <input type="radio" class="bab_radio" name="broadcast_type"
+                                                            value="0" id="zero" checked>
+                                                        <label for="zero" style="justify-content: left;">
+                                                            All
+                                                        </label>
+                                                    </span>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <span>
+                                                        <input type="radio" class="bab_radio" name="broadcast_type"
+                                                            value="1" id="one">
+                                                        <label for="one" style="justify-content: left;">
+                                                            User Groups
+                                                        </label>
+                                                    </span>
+
+                                                </div>
+                                                <div class="col-sm-6">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-sm-12 group_div mb-3 mt-2"
+                                            style="display: none;align-items: start;">
+                                            <div class="col-sm-2 form_label text-uppercase">
+                                                Search Group
+                                            </div>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="search_group" value=""
+                                                    placeholder="Search by name" id="search_group" class="form-control"
+                                                    style="width:100%;" autocomplete="off" />
+
+                                                <div class="asset_typeahead_list mt-2" style="display: none;">
+                                                    <ul class="list-group" data-role="listview"></ul>
+                                                </div>
+                                                <input type="hidden" id="group_id">
+                                                <input type="hidden" id="broadcast_group_name">
+                                                <input type="hidden" id="group_member_count">
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <button id="add_broadcast_group" type="button"
+                                                    class="btn btn-bg float-right">Add</button>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group col-sm-12 group_div mb-4"
+                                            style="display: none;margin-left: 16.2%;">
+                                            <div class="col-sm-10 col-sm-offset-2">
+                                                <div class="card table-responsive h-100">
+                                                    <table id="groups_list" class="table table-hover">
+                                                        <thead class="thead thead-light">
+                                                            <tr>
+                                                                <th width="350px">Group</th>
+                                                                <th width="120px">Members</th>
+                                                                <th width="120px">Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-10 col-sm-offset-2">
+                                                <span id="group_list_error" class="required_star"
+                                                    style="color: red;"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mb-3">
+                                            <div class="form-group editor_group" style="align-items: baseline;">
+                                                <div class="col-sm-2 form_label text-uppercase required">
+                                                    Message
+                                                </div>
+                                                <div class="col-sm-10">
+                                                    <!--?php //echo get_template(get_site_theme() . 'froalaeditor', array('name' => 'broadcast_message', 'editor_id' => 'broadcast_message', 'required' => 'required', 'value' => '')); ?-->
+                                                    <textarea name="broadcast_message" id="broadcast_message"
+                                                        class="broadcast_message required d-none"
+                                                        aria-required="true"></textarea>
+                                                    <!-- <span class="helper_text">Please use the upload image feature to upload images.</span> -->
+                                                    <div>
+                                                        <span id="broadcast_message_error" class="required_star"
+                                                            style="color: red;"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mb-3">
+                                            <div class="form-group">
+                                                <div class="col-sm-2 form_label text-uppercase required">
+                                                    Start Date
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" id="broadcast_start_date"
+                                                        placeholder="Start Date" name="broadcast_start_date"
+                                                        class="form-control datetimepicker">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 mb-3">
+                                            <div class="form-group">
+                                                <div class="col-sm-2 form_label text-uppercase required">
+                                                    End Date
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <input type="text" id="broadcast_end_date" placeholder="End Date"
+                                                        name="broadcast_end_date" class="form-control datetimepicker">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 button-group text-center">
+                                            <input type="submit" name="send" value="Send" class="btn btn-bg">
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <!-- <button id="btn_enter_external_site" type="button" data-external_url="" data-asset_id="" class="btn btn-danger-brwn"></button> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="modal fade" id="author">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Author</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body"></div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger-brwn" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="intent">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Intent of This Asset</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p id="intent_description" style="word-break: break-word !important;"></p>
+
+                        <h6>PUBLISHED</h6>
+                        <span id="intent_published"></span>
+
+                        <h6>UPLOADED BY</h6>
+                        <span id="intent_uploaded_by"></span>
+
+                        <h6>AUTHOR</h6>
+                        <span id="intent_author"></span>
+
+                        <h6>ADDITIONAL INFO</h6>
+                        <span id="intent_additional_info"></span>
+
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger-brwn" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="skill">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Skill Tags</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body text-capitalize"></div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger-brwn" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="external_asset">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Redirection to another site</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <p>
+                            You are now leaving Osmosis webpage to access a third party website. This is a curated asset
+                            from
+                            the web – any of its content / opinion / representation – as expressed by the third party,
+                            in part
+                            or its entirety, remains solely that of the third party.</p>
+                        <br>
+                        <p>
+                            Osmosis Learn will in no way, directly or indirectly, be held responsible for any the
+                            opinions /
+                            views / contents expressed by the third party, by association of the hyperlink. Osmosis
+                            Learn will
+                            not be held liable for any damage, loss or expense or economic loss arising from the third
+                            party
+                            site. </p>
+                        <p>
+                            <input type="checkbox" id="do_not_show_popup_checkbox"> Do not show this message again
+                        </p>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button id="btn_enter_external_site" type="button" data-external_url="" data-asset_id=""
+                            class="btn btn-danger-brwn">OK</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="add_asset_bookmark">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+
+                    <form id="form_add_bookmark"
+                        action="https://1kubap1syg.execute-api.ap-southeast-1.amazonaws.com/Prod/asset/addBookmark/?slug=sample-content-duties-and-responsibilities-of-first-aider"
+                        method="POST">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add New Bookmark</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <input type="hidden" name="secure_key" value="fe8a6da8766e45981d81cb1f35a47c78">
+                            <div class="form-group">
+                                <label for="bookmark_title">Title</label>
+                                <input id="bookmark_title" type="text" class="form-control" name="bookmark_title"
+                                    placeholder="Bookmark Title">
+                                <span id="bookmark_title_required" class="invalid-feedback" tabindex="1">
+                                    This field is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookmark_category_id">Category</label>
+                                <select id="bookmark_category_id" name="bookmark_category_id"
+                                    class="form-control selectpicker">
+                                </select>
+                                <a href="javascript:void(0);" class="btn float-right pr-0"
+                                    data-target="#add_bookmark_category" data-toggle="modal" role="button">
+                                    <small class="form-text text-right">Add New Category</small>
+                                </a>
+                                <span id="bookmark_category_id_required" class="invalid-feedback" tabindex="1">
+                                    This field is required
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="bookmark_link">Link</label>
+                                <input type="text" name="bookmark_link" class="form-control" readonly="readonly"
+                                    placeholder="Paste Link Here"
+                                    value="https://futureverse.osmosislearn.com/asset/sample-content-duties-and-responsibilities-of-first-aider/dashboard">
+                            </div>
+                            <div class="form-group">
+                                <label for="bookmark_description">Description</label>
+                                <textarea class="form-control" name="bookmark_description" id="bookmark_description"
+                                    cols="30" rows="4" placeholder="Type something"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger-brwn">Save</button>
+                            <button type="button" class="btn btn-danger-brwn" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="add_bookmark_category">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <form id="form_add_bookmark_category"
+                        action="https://futureverse.osmosislearn.com/bookmark/add-category" method="POST">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add New Bookmark Category</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <input type="hidden" name="secure_key" value="fe8a6da8766e45981d81cb1f35a47c78">
+                            <div class="form-group">
+                                <label for="bookmark_categories_name">Title</label>
+                                <input id="bookmark_categories_name" type="text" class="form-control"
+                                    name="bookmark_categories_name" placeholder="Enter category title">
+                                <span id="bookmark_categories_name_required" class="invalid-feedback" tabindex="1">
+                                    This field is required
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger-brwn">Save</button>
+                            <button type="button" class="btn btn-danger-brwn" data-dismiss="modal">Close</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="share_asset">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Share the asset</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <label for="copy_asset_link">Copy Link Below</label>
+                        <div class="input-group mb-5">
+                            <input id="copy_asset_link" aria-describedby="share-addon" type="text" class="form-control"
+                                value="https://futureverse.osmosislearn.com/asset/sample-content-duties-and-responsibilities-of-first-aider/dashboard"
+                                readonly>
+                            <div id="div_copy_asset_link" class="input-group-append clipboard_button"
+                                data-clipboard-target="#copy_asset_link">
+                                <span id="share-addon" class="input-group-text btn">
+                                    <em class="fa fa-copy"></em>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Social Media Share</label>
+                            <div>
+                                <a role="button"
+                                    href="https://www.facebook.com/sharer.php?title=[sample content] Duties and responsibilities of First Aider.&amp;description=&amp;u=https://futureverse.osmosislearn.com/asset/sample-content-duties-and-responsibilities-of-first-aider/dashboard&amp;picture=https://d44u8sowget4w.cloudfront.net/ODc/assets/sample-content-duties-and-responsibilities-of-first-aider/featured-image/2906 - sLyB16NMb9Yn8XUHhZKu-sample-content-duties-and-responsibilities-of-first-aider.png?&amp;src=sdkpreparse"
+                                    target="__blank" class="btn btn-bg btn-circle">
+                                    <em class="fa fa-facebook"></em>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger-brwn" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="breadcrumb bg-white border p-0 m-0 border-top-0">
+            <div class="container">
+                <div class="row m-xs-0">
+                    <ol class="breadcrumb bg-white mb-0 pl-0 pt-1 pb-1">
+                        <li class="breadcrumb-item"><a href="https://futureverse.osmosislearn.com/"
+                                class="bab_0321_home_icon">
+                                <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <g id="website-style-guide" transform="translate(-757.000000, -2681.000000)">
+                                            <g id="IC/20/breadcrumb-home"
+                                                transform="translate(756.000000, 2678.000000)">
+                                                <rect id="Rectangle" x="0" y="0" width="20" height="20"></rect>
+                                                <g id="home" transform="translate(1.000000, 3.000000)"
+                                                    fill-rule="nonzero">
+                                                    <polygon id="Path"
+                                                        points="8.99997891 0 0 7.94116917 2.69999789 7.94116917 2.69999789 15 7.20000844 15 7.20000844 9.70588722 10.7999916 9.70588722 10.7999916 15 15.3000021 15 15.3000021 7.94116917 18 7.94116917">
+                                                    </polygon>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a></li>
+                        <li class="breadcrumb-item active"><a
+                                href="https://futureverse.osmosislearn.com/asset/sample-content-duties-and-responsibilities-of-first-aider/dashboard">[sample
+                                content] Dut...</a></li>
+                    </ol>
+                </div>
+            </div>
+        </nav>
+        <div class="bab_0321_singleasset_tab1">
+            <div class="bab_0321_singleasset_tab1 head-bdr">
+                <div class="bab_0321_singleasset_tab1 container pd0">
+                    <div class="bab_0321_singleasset_tab1 head">
+                        <h1>[sample content] Duties and responsibilities of First Aider.</h1>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div class="player container p-0">
+                        <div class="pl-wrap">
+                            <div class="logo">
+                                <img src="https://d44u8sowget4w.cloudfront.net/ODc/assets/sample-content-duties-and-responsibilities-of-first-aider/asset-files/ - AFZJUju21bd0xBghR4Xt.png?"
+                                    alt="[sample content] Duties and responsibilities of First Aider."
+                                    class="w-100 img-resposive" style="border: 1px solid black;">
+                                <button id="btn_close_full_screen" class="btn btn-danger-brwn"><span>x</span></button>
+                            </div>
+                            <div id="pl-bar">
+                                <div class="float-right"><i class="fa fa-expand r"></i> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bab_0321_singleasset_tab1 container usr-prf">
+                        <div class="bab_0321_singleasset_tab1 row">
+                            <div class="bab_0321_singleasset_tab1 col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                                <div class="bab_0321_singleasset_tab1 usrr-prfl">
+
+                                    <div class="bab_0321_singleasset_tab1 usr-info m-2">
+                                        <h2 class="m-0 ellipsis max-height-50 min-height-50" title="Poh Moi"
+                                            style="min-width: 140px;">Uploaded by
+                                        </h2>
+                                        <h6 class="m-0 ellipsis max-height-50 min-height-50" title="Poh Moi">
+                                            <span class="ellipsis">Poh Moi</span>
+                                        </h6>
+                                    </div>
+                                    <!-- <div class="bab_0321_singleasset_tab1 dot"></div> -->
+                                    <div class="bab_0321_singleasset_tab1 usr-info m-2">
+                                        <h2 class="m-0 ellipsis max-height-50 min-height-50" style="min-width: 140px;">
+                                            Authored by
+                                        </h2>
+                                        <h6 class="m-0 ellipsis max-height-50 min-height-50" title="GreenSafe">
+                                            <span class="ellipsis">GreenSafe</span>
+                                        </h6>
+                                    </div>
+                                    <!-- <div class="bab_0321_singleasset_tab1 dot"></div> -->
+                                    <div class="bab_0321_singleasset_tab1 usr-info m-2" title=" 3 days">
+                                        <h2 class="m-0 ellipsis max-height-50 min-height-50" style="min-width: 140px;">
+                                            Additional info
+                                        </h2>
+                                        <h6 class="m-0 ellipsis max-height-50 min-height-50" title="3 days">
+                                            <span class="ellipsis">3 days</span>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bab_0321_singleasset_tab1 col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                                <div class="bab_0321_singleasset_tab1 video_info m-2">
+
+                                    PNG
+                                    <div class="bab_0321_singleasset_tab1 vdo_dot"></div>
+                                    270 mins
+                                    <div class="bab_0321_singleasset_tab1 vdo_dot"></div>
+                                    published 18/05/2023
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="google_ads_spacing"></div>
+                <div class="col-10 google_ads_div">
+                    <h2 class="google_ads_heading">ADVERTISEMENT</h2>
+                    <script async
+                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8210698157421161"
+                        crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+                        data-ad-format="fluid" data-ad-client="ca-pub-8210698157421161" data-ad-slot="7943545378"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="bab_0321_singleasset_tab1 iccn bg-white">
+                    <div class="bab_0321_singleasset_tab1">
+                        <div class="container p-0">
+                            <div class="bab_0321_singleasset_tab1 icns">
+                                <div class="bab_0321_singleasset_tab1 pd0">
+                                    <div class="bab_0321_singleasset_tab1 row tabb">
+                                        <div class="col-md-6 col-lg-4 col-xl-4" style="min-width:50%;">
+                                            <div class="row">
+                                                <div class="intend_asset col-2 col-sm-2 col-lg-2">
+                                                    <a class="active">
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1" data-toggle="tooltip" data-placement="bottom"
+                                                            title="Intent of This Asset">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-80.000000, -2450.000000)">
+                                                                    <g id="IC/30/intent-f"
+                                                                        transform="translate(80.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-1"></path>
+                                                                        <path
+                                                                            d="M14,12 L16,12 L16,10 L14,10 L14,12 Z M15,23 C10.59,23 7,19.41 7,15 C7,10.59 10.59,7 15,7 C19.41,7 23,10.59 23,15 C23,19.41 19.41,23 15,23 L15,23 Z M15,5 C9.48,5 5,9.48 5,15 C5,20.52 9.48,25 15,25 C20.52,25 25,20.52 25,15 C25,9.48 20.52,5 15,5 L15,5 Z M14,20 L16,20 L16,14 L14,14 L14,20 Z"
+                                                                            id="Fill-3"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                                <div class="asset_iterations col-2 col-sm-2 col-lg-2">
+                                                    <a class="asset_iterations_btn">
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1" data-toggle="tooltip" data-placement="bottom"
+                                                            title="Iterations">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-80.000000, -2450.000000)">
+                                                                    <g id="IC/30/intent-f"
+                                                                        transform="translate(80.000000, 2450.000000)">
+                                                                        <path id="Fill-1"
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-1"></path>
+                                                                        <path id="Fill-3"
+                                                                            d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"
+                                                                            transform="translate(6,6)" />
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg> <span id="total_iterated_assets">(0)</span>
+                                                    </a>
+                                                </div>
+                                                <div class="related_asset col-2 col-sm-2 col-lg-2">
+                                                    <a>
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1" data-toggle="tooltip" data-placement="bottom"
+                                                            title="Related Assets">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-280.000000, -2450.000000)">
+                                                                    <g id="IC/30/related-asset-f"
+                                                                        transform="translate(280.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-7"></path>
+                                                                        <path
+                                                                            d="M17.745,13.255 L17.745,9.126 L21.874,13.255 L17.745,13.255 Z M22.998,12.502 L18.496,8 L12.5,8 C11.675,8 11,8.675 11,9.5 L11,18.5 C11,19.325 11.675,20 12.5,20 L21.5,20 C22.325,20 23,19.325 23,18.5 L23,12.498 L22.998,12.502 Z M9.5,11 L8,11 L8,21.5 C8,22.325 8.675,23 9.5,23 L20,23 L20,21.5 L9.5,21.5 L9.5,11 Z"
+                                                                            id="Fill-10"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                        <span id="total_related_assets">(0)</span>
+                                                    </a>
+                                                </div>
+                                                <div class="related_com col-2 col-sm-2 col-lg-2">
+                                                    <a>
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1" data-toggle="tooltip" data-placement="bottom"
+                                                            title="Related Communities">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-330.000000, -2450.000000)">
+                                                                    <g id="IC/30/communities-f"
+                                                                        transform="translate(330.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-29"></path>
+                                                                        <path
+                                                                            d="M18.227,15.455 C18.029,15.455 17.804,15.469 17.566,15.489 C18.357,16.062 18.909,16.832 18.909,17.841 L18.909,19.546 L23,19.546 L23,17.841 C23,16.253 19.816,15.455 18.227,15.455 M12.772,15.455 C11.184,15.455 8,16.253 8,17.841 L8,19.546 L17.545,19.546 L17.545,17.841 C17.545,16.253 14.361,15.455 12.772,15.455 M12.772,14.091 C13.904,14.091 14.811,13.178 14.811,12.046 C14.811,10.914 13.904,10 12.772,10 C11.641,10 10.727,10.914 10.727,12.046 C10.727,13.178 11.641,14.091 12.772,14.091 M18.227,14.091 C19.359,14.091 20.266,13.178 20.266,12.046 C20.266,10.914 19.359,10 18.227,10 C17.095,10 16.182,10.914 16.182,12.046 C16.182,13.178 17.095,14.091 18.227,14.091"
+                                                                            id="Fill-31"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg>
+                                                        <span id="total_related_communities">(0)</span>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-2 col-sm-2 col-lg-2 disableClick">
+                                                    <a data-toggle="modal" data-target="#auth_modal">
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1" data-toggle="tooltip" data-placement="bottom"
+                                                            title="Co create">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-80.000000, -2450.000000)">
+                                                                    <g id="IC/30/intent-f"
+                                                                        transform="translate(80.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-1" style="fill: var(--theme1);">
+                                                                        </path>
+                                                                        <path
+                                                                            d="M6.72 20.492c1.532.956 3.342 1.508 5.28 1.508 1.934 0 3.741-.55 5.272-1.503l1.24 1.582c-1.876 1.215-4.112 1.921-6.512 1.921-2.403 0-4.642-.708-6.52-1.926l1.24-1.582zm6.405-.992l-.594.391c-.077.069-.19.109-.307.109h-.447c-.118 0-.231-.04-.308-.109l-.594-.391h2.25zm10.875-.5h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.883.586 1.414zm-18 0h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.883.586 1.414zm7.146-.5c.138 0 .25.112.25.25s-.112.25-.25.25h-2.279c-.138 0-.25-.112-.25-.25s.112-.25.25-.25h2.279zm.247-.5c0-2.002 1.607-2.83 1.607-4.614 0-1.86-1.501-2.886-3.001-2.886s-2.999 1.024-2.999 2.886c0 1.784 1.607 2.639 1.607 4.614h2.786zm7.607-6c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm-18 0c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25zm12.87 2.385l1.349.612-.413.911-1.298-.588c.15-.3.275-.608.362-.935zm-7.739 0c.087.332.208.631.36.935l-1.296.588-.414-.911 1.35-.612zm9.369-1.885v1h-1.501c.01-.335-.02-.672-.093-1h1.594zm-9.406 0c-.072.327-.102.663-.092.997v.003h-1.502v-1h1.594zm6.928-1.714l1.242-.882.579.816-1.252.888c-.146-.291-.335-.566-.569-.822zm-6.044-.001c-.23.252-.418.525-.569.823l-1.251-.888.578-.816 1.242.881zm4.435-1.046l.663-1.345.897.443-.664 1.345c-.278-.184-.58-.332-.896-.443zm-2.826-.001c-.315.11-.618.258-.897.442l-.663-1.343.897-.443.663 1.344zm-2.587-9.054v2.149c-2.938 1.285-5.141 3.942-5.798 7.158l-2.034-.003c.732-4.328 3.785-7.872 7.832-9.304zm8 0c4.047 1.432 7.1 4.976 7.832 9.304l-2.034.003c-.657-3.216-2.86-5.873-5.798-7.158v-2.149zm-3.5 8.846c-.334-.039-.654-.041-1-.001v-1.529h1v1.53zm2.5-2.53h-6c0-1.105.895-2 2-2h2c.53 0 1.039.211 1.414.586s.586.884.586 1.414zm-3-7c1.242 0 2.25 1.008 2.25 2.25s-1.008 2.25-2.25 2.25-2.25-1.008-2.25-2.25 1.008-2.25 2.25-2.25z"
+                                                                            style="fill: white;"
+                                                                            transform="translate(3,3)"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg> <!-- <span id="total_asset_notes">(0)</span> -->
+                                                    </a>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class=" col-md-3 col-lg-3 col-xl-3 mt-xs-3"></div>
+                                        <div class=" col-md-4 col-lg-3 col-xl-3 mt-xs-4">
+                                            <div class="row">
+                                                <div class="offset-md-3 offset-lg-3 offset-xl-3 col-3"
+                                                    data-toggle="tooltip" title="Inspire">
+                                                    <a id="btn_asset_inspire" data-toggle="modal"
+                                                        data-target="#auth_modal"
+                                                        class="icon-button active inspire-button">
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-130.000000, -2450.000000)">
+                                                                    <g id="IC/30/inspire-f"
+                                                                        transform="translate(130.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-7"></path>
+                                                                        <path
+                                                                            d="M17.6263226,16.325 L16.9677419,16.775 L16.9677419,18.5 L13.8709677,18.5 L13.8709677,16.775 L13.2134194,16.325 C12.1677419,15.62 11.5483871,14.472 11.5483871,13.25 C11.5483871,11.18 13.2825806,9.5 15.4193548,9.5 C17.5571613,9.5 19.2903226,11.18 19.2903226,13.25 C19.2903226,14.472 18.6709677,15.62 17.6263226,16.325 L17.6263226,16.325 Z M15.4193548,8 C12.4309677,8 10,10.355 10,13.25 C10,15.035 10.9218065,16.602 12.3225806,17.555 L12.3225806,19.25 C12.3225806,19.662 12.6714839,20 13.0967742,20 L17.7419355,20 C18.1682581,20 18.516129,19.662 18.516129,19.25 L18.516129,17.555 C19.9179355,16.602 20.8387097,15.035 20.8387097,13.25 C20.8387097,10.355 18.4077419,8 15.4193548,8 L15.4193548,8 Z M13.0967742,22.25 C13.0967742,22.662 13.4456774,23 13.8709677,23 L16.9677419,23 C17.3940645,23 17.7419355,22.662 17.7419355,22.25 L17.7419355,21.5 L13.0967742,21.5 L13.0967742,22.25 Z"
+                                                                            id="Fill-10"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg> </a>
+                                                </div>
+                                                <div class="bookmark col-3" data-toggle="tooltip" title="Add Bookmark">
+                                                    <a class="icon-button active bookmark-button" data-toggle="modal"
+                                                        data-target="#auth_modal">
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-180.000000, -2450.000000)">
+                                                                    <g id="IC/30/bookmark-f"
+                                                                        transform="translate(180.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-19"></path>
+                                                                        <path
+                                                                            d="M19.3225806,20.5 L15.0211613,18.683 L10.7207742,20.5 L10.7207742,9.667 L19.3225806,9.667 L19.3225806,20.5 Z M19.3225806,8 L10.7207742,8 C9.77419355,8 9.00825806,8.75 9.00825806,9.667 L9,23 L15.0211613,20.5 L21.0433548,23 L21.0433548,9.667 C21.0433548,8.75 20.2691613,8 19.3225806,8 L19.3225806,8 Z"
+                                                                            id="Fill-22"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg> </a>
+                                                </div>
+                                                <div class="col-3">
+                                                    <a class="icon-button" data-toggle="modal"
+                                                        data-target="#auth_modal">
+                                                        <svg width="30px" height="30px" viewBox="0 0 30 30"
+                                                            version="1.1" data-toggle="tooltip" title="Share the asset">
+                                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                                                fill-rule="evenodd">
+                                                                <g id="website-style-guide"
+                                                                    transform="translate(-230.000000, -2450.000000)">
+                                                                    <g id="IC/30/share-f"
+                                                                        transform="translate(230.000000, 2450.000000)">
+                                                                        <path
+                                                                            d="M30,15 C30,23.284 23.284,30 15,30 C6.716,30 0,23.284 0,15 C0,6.716 6.716,0 15,0 C23.284,0 30,6.716 30,15"
+                                                                            id="Fill-30"></path>
+                                                                        <path
+                                                                            d="M19.6593548,18.602 C19.0689032,18.602 18.5403871,18.828 18.1357419,19.182 L12.5935484,16.057 C12.6327742,15.884 12.6637419,15.71 12.6637419,15.53 C12.6637419,15.349 12.6327742,15.176 12.5935484,15.003 L18.0738065,11.908 C18.4929032,12.284 19.0451613,12.518 19.6593548,12.518 C20.9496774,12.518 21.9912258,11.509 21.9912258,10.259 C21.9912258,9.009 20.9496774,8 19.6593548,8 C18.3690323,8 17.3274839,9.009 17.3274839,10.259 C17.3274839,10.439 17.3584516,10.613 17.3976774,10.786 L11.9174194,13.881 C11.4972903,13.504 10.9460645,13.271 10.331871,13.271 C9.04154839,13.271 8,14.28 8,15.53 C8,16.78 9.04154839,17.789 10.331871,17.789 C10.9460645,17.789 11.4972903,17.555 11.9174194,17.179 L17.4513548,20.311 C17.4131613,20.469 17.3894194,20.635 17.3894194,20.801 C17.3894194,22.013 18.4082581,23 19.6593548,23 C20.9104516,23 21.9292903,22.013 21.9292903,20.801 C21.9292903,19.588 20.9104516,18.602 19.6593548,18.602"
+                                                                            id="Fill-32"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </svg> </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="asset" class="active">
+                            <div class="container p-0">
+                                <div class="bab_0321_singleasset_tab1 detail">
+                                    <h2>Intent of this Asset</h2>
+
+
+                                    <div id="intent_description" class="ck-content">
+                                        <p>Explain the duties and responsibilities of First Aider.</p>
+                                    </div>
+                                </div>
+                                <div class="bab_0321_singleasset_tab1 ctg">
+                                    <div class="bab_0321_singleasset_tab1 row">
+                                        <div
+                                            class="bab_0321_singleasset_tab1 col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                                            <div class="bab_0321_singleasset_tab1 ctg_ins">
+                                                <h2>Category</h2>
+                                                <p>
+                                                    <span class="bab_0321_singleasset_tab1 global-search-key"
+                                                        onclick="goToUrl('https://futureverse.osmosislearn.com/global_search?search_key=Leadership')">Leadership</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="bab_0321_singleasset_tab1 col-xs-12 col-sm-6 col-md-8 col-lg-8 col-xl-8">
+                                            <div class="bab_0321_singleasset_tab1 skl_ins">
+                                                <h2>SKILL TAGS</h2>
+                                                <p>
+                                                    <span class="bab_0321_singleasset_tab1 global-search-key"
+                                                        onclick="goToUrl('https://futureverse.osmosislearn.com/global_search?search_key=all relevant skills under leadership will be identified as the skill tags for this category')">all
+                                                        relevant skills under leadership will be identified as the skill
+                                                        tags for this category</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="rasset" style="display: none;">
+                            <div class="container p-0">
+                                <div class="singleasset row hhed">
+                                    <h2>Related Asset&nbsp;(0)</h2>
+                                </div>
+                                <div class="rasset">
+                                    <div class="singleasset row">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="itasset" style="display: none;padding: 30px 0;">
+                            <div class="container p-0">
+                                <div class="singleasset row hhed">
+                                    <h2>Iterations&nbsp;(0)</h2>
+                                </div>
+                                <div class="itasset">
+                                    <div class="singleasset row">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="rcom" style="display: none;">
+                            <div class="container p-0">
+                                <div class="singleasset row hhed">
+                                    <h2>Communities&nbsp;(0)</h2>
+                                </div>
+                                <div class="rcom">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="bab_0321_footer footer-top">
+                <div class="bab_0321_footer container">
+                    <div class="bab_0321_footer row">
+                        <div class="bab_0321_footer col-12 col-sm-12 col-lg-8 col-xl-8">
+                            <div class="row">
+                                <div class="col-6 mt-2">
+                                    <a class='pl-2 pr-2 btn btn-footer'
+                                        href="https://futureverse.osmosislearn.com/about">About Us</a>
+                                    <a class='pl-2 pr-2 btn btn-footer'
+                                        href="https://futureverse.osmosislearn.com/privacy-policy/mobile">Privacy
+                                        Policy</a>
+                                </div>
+                                <div class="col-6 bab_0321_footer foot_logo justify-content-center hand-cursor mt-1"
+                                    onclick="goToUrl('https://osmosislearn.com/')">
+                                    <!-- <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+    y="0px" viewBox="0 0 162 40" style="enable-background:new 0 0 162 40;" xml:space="preserve" width="380" height="40">
+    <g>
+        <path class="st0" d="M61.6,35c-1.8,0-3.5,0-5.3,0c0-7.1,0-14.3,0-21.5c1.7,0,3.5,0,5.3,0c0,0.8,0,1.5,0,2.3
+c0.3-0.3,0.7-0.4,0.9-0.7c0.9-0.9,2-1.5,3.3-1.8c1.1-0.3,2.2-0.5,3.4-0.3c1.3,0.1,2.4,0.5,3.4,1.4c0.8,0.6,1.4,1.3,1.9,2.2
+c0.1,0.1,0.1,0.2,0.2,0.2c0.9-1.3,2-2.3,3.4-2.9c0.8-0.4,1.6-0.6,2.5-0.8c0.5-0.1,1.1-0.1,1.6-0.1c1.7,0.1,3.2,0.6,4.6,1.7
+c0.9,0.7,1.4,1.5,1.8,2.5c0.3,0.8,0.4,1.6,0.5,2.4c0.2,2.4,0.1,4.9,0.1,7.4c0.1,2.5,0,4.9,0,7.4c0,0.2,0,0.4,0,0.6
+c-0.5,0-1,0-1.4,0c-1.1,0-2.3,0-3.5,0c-0.6,0-0.6,0-0.6-0.7c0-3.9,0-7.8,0-11.7c0-1.1-0.2-2.2-0.7-3.2c-0.5-1.1-1.5-1.6-2.7-1.6
+c-1.4-0.1-2.4,0.4-3.4,1.4c-0.6,0.7-1,1.5-1.1,2.3c-0.2,0.8-0.3,1.6-0.3,2.3c0,3.4,0,6.8,0,10.2c0,0.1,0,0.3,0,0.4
+c0,0.4-0.1,0.4-0.4,0.4c-1.7,0-3.3,0-5.1,0c0-0.2,0-0.4,0-0.6c0-3.5,0.1-7.1,0-10.7c0-1.2-0.1-2.4-0.5-3.5c-0.6-1.7-2.2-2.6-4-2.2
+c-1.8,0.3-3.1,2.1-3.4,3.7c-0.2,0.9-0.2,1.8-0.3,2.7c-0.3,3.4-0.1,6.7-0.1,10.1C61.6,34.7,61.6,34.8,61.6,35z" />
+        <path class="st0" d="M115.4,24.3c-0.1,2-0.5,3.8-1.5,5.5c-0.7,1.1-1.4,2.2-2.4,3c-1.4,1.2-3,2-4.8,2.5c-0.4,0.1-0.9,0.1-1.3,0.2
+c-0.5,0.1-0.9,0.2-1.4,0.1c-2.4-0.1-4.6-0.7-6.5-2.2c-1.6-1.3-2.9-2.9-3.8-4.8c-0.3-0.8-0.5-1.5-0.6-2.3c-0.2-1-0.2-2.1-0.1-3.2
+s0.3-2.1,0.8-3.1c0.7-1.7,1.8-3,3.2-4.2c1.3-1.1,2.8-2,4.5-2.4c1.1-0.3,2.4-0.4,3.6-0.3c1.4,0.2,2.8,0.5,4.1,1.1
+c0.8,0.4,1.5,0.8,2.2,1.4c0.3,0.2,0.5,0.4,0.8,0.7c1.4,1.3,2.3,2.9,2.8,4.6c0.2,0.7,0.4,1.3,0.4,1.9
+C115.3,23.3,115.4,23.8,115.4,24.3z M110,24.3c-0.1-0.3-0.2-0.6-0.2-0.9c0-0.9-0.3-1.6-0.8-2.4c-0.7-1.1-1.6-1.9-2.8-2.4
+c-0.7-0.3-1.4-0.3-2.1-0.4c-0.4-0.1-0.8,0-1.2,0.1c-1.3,0.3-2.3,0.9-3.1,1.9c-0.5,0.6-0.9,1.3-1.1,2c-0.2,0.5-0.2,1.1-0.3,1.6
+c-0.2,0.7,0,1.3,0.1,2c0.1,0.9,0.5,1.7,1,2.5s1.2,1.4,2,1.7c1,0.4,2.1,0.7,3.3,0.5c1.3-0.2,2.4-0.8,3.3-1.6
+C109.4,27.5,109.8,25.9,110,24.3z" />
+        <path class="st0" d="M14.7,4.8c0.4-0.4,0.9-0.3,1.4-0.3c1-0.2,2.1-0.2,3.1-0.2c2,0.1,4,0.4,5.8,1.2c1.4,0.5,2.6,1.3,3.8,2.1
+C29.3,8,29.9,8.5,30.4,9c0.5,0.6,1.1,1.2,1.6,1.8c0.5,0.7,1,1.5,1.4,2.3c0.6,1.3,1,2.7,1.3,4.1c0.2,1.3,0.3,2.7,0.2,4
+c-0.1,1.1-0.3,2.2-0.5,3.3c-0.5,1.9-1.4,3.6-2.6,5.1c-0.7,0.9-1.5,1.7-2.4,2.4c-1.1,0.9-2.3,1.6-3.5,2.2c-1.1,0.5-2.3,0.9-3.5,1.1
+c-1.8,0.4-3.6,0.4-5.5,0.3c-0.7,0-1.4,0-2-0.4c0-1.7,0-3.5,0-5.3c0.1-0.3,0.2-0.4,0.5-0.3c0.7,0.2,1.4,0.3,2.1,0.3
+c0.4,0,0.8,0.1,1.1,0.1c1.9-0.1,3.8-0.4,5.4-1.4s2.9-2.3,3.9-4c0.5-0.9,0.8-1.8,1-2.8c0.2-0.9,0.2-2,0.1-2.9
+c-0.1-1.4-0.5-2.8-1.2-4c-0.3-0.5-0.7-1-1.1-1.5c-0.7-0.8-1.4-1.4-2.2-2c-1-0.7-2.2-1.1-3.4-1.4c-1.2-0.3-2.4-0.3-3.6-0.2
+c-0.9,0.1-1.7,0.3-2.6,0.5c0-0.1-0.1-0.2-0.1-0.3C14.7,8.4,14.7,6.6,14.7,4.8z" />
+        <path class="st0" d="M40.1,28.2c0.6,0.6,1.1,1.1,1.7,1.5c1,0.6,2.1,1,3.3,0.9c0.8-0.1,1.3-0.4,1.6-1.1c0.3-0.5,0.1-1-0.2-1.4
+c-0.4-0.6-1-1-1.6-1.4c-0.7-0.3-1.4-0.7-2.1-1c-1.5-0.8-2.9-1.7-4-3c-0.8-0.9-1.3-2-1.3-3.2c0-0.7-0.1-1.4,0.2-2.1
+c0.4-1.3,1.2-2.3,2.3-3.2c0.9-0.7,2-1,3.1-1.3c0.8-0.2,1.5-0.2,2.2-0.1c1.5,0.1,2.8,0.7,4.1,1.5c0.8,0.5,1.5,1.3,2,1.9
+c-1.1,1.1-2.2,2.2-3.4,3.4c-0.5-0.3-1.1-0.8-1.7-1.2c-0.8-0.6-1.6-0.7-2.6-0.6c-0.4,0.1-0.8,0.3-1.1,0.7c-0.3,0.4-0.2,1,0.4,1.5
+c0.9,0.7,2,1.2,3,1.7c1.2,0.6,2.3,1.3,3.4,2c0.5,0.4,1,1,1.4,1.6c0.6,1,0.9,2.2,0.9,3.4c0,1.8-0.7,3.4-2,4.7c-1,1-2.2,1.5-3.6,1.8
+c-0.9,0.2-1.7,0.3-2.6,0.3c-1.7-0.1-3.4-0.5-4.8-1.5c-0.8-0.5-1.5-1.2-2.1-2c-0.2-0.2-0.2-0.4,0-0.5l0.1-0.1
+c0.8-0.8,1.5-1.6,2.2-2.3C39.6,28.9,39.9,28.6,40.1,28.2z" />
+        <path class="st0" d="M118,31.9c1.1-1.2,2.2-2.4,3.2-3.5c0.7,0.5,1.3,1,2,1.5c1,0.7,2.1,1,3.3,0.8c0.5-0.1,1-0.3,1.4-0.8
+c0.3-0.4,0.2-1.4-0.2-1.8c-0.3-0.4-0.7-0.7-1.1-0.9c-1-0.5-2.1-1.1-3.2-1.7c-1.4-0.8-2.7-1.7-3.6-3c-0.4-0.7-0.8-1.4-0.9-2.1
+c-0.2-1-0.1-2,0.2-3c0.2-0.5,0.5-1.1,0.8-1.6c0.5-0.9,1.4-1.5,2.3-2c0.7-0.4,1.4-0.6,2.2-0.7c0.5-0.1,1-0.1,1.5-0.1
+c1.1,0,2.3,0.3,3.3,0.7c1.4,0.5,2.3,1.5,3.3,2.6c0.1,0.1,0.1,0.2,0.2,0.4c-1,1.1-2.1,2.2-3.2,3.4c-0.4-0.3-0.8-0.7-1.1-1
+c-0.5-0.5-1.1-0.8-1.9-1c-0.6-0.1-1.3-0.1-1.8,0.1c-0.7,0.2-1,1.4-0.4,1.8c0.3,0.2,0.7,0.5,1,0.7c0.9,0.5,1.9,1,2.8,1.4
+c1.3,0.7,2.6,1.4,3.6,2.6c0.8,0.9,1.3,2,1.4,3.2c0.1,0.4,0.2,0.8,0.1,1.2c-0.1,1.2-0.3,2.4-1.1,3.4c-0.9,1.3-2,2.1-3.5,2.6
+c-0.7,0.2-1.3,0.3-2,0.4c-0.5,0.1-1.1,0.2-1.7,0.1c-1.9-0.2-3.7-0.7-5.2-1.8C119.1,33.2,118.5,32.6,118,31.9z" />
+        <path class="st0" d="M160.2,16.5c-1.1,1.1-2.3,2.3-3.4,3.4c-0.7-0.7-1.5-1.3-2.4-1.7c-0.8-0.3-1.6-0.4-2.4,0
+c-0.9,0.5-0.9,1.4-0.1,2c1.1,0.8,2.4,1.3,3.6,1.9c1.2,0.6,2.3,1.3,3.3,2.2c0.9,0.9,1.4,2,1.6,3.2c0.2,0.7,0.2,1.4,0.1,2.1
+c-0.1,1-0.4,2-1.1,2.9c-0.9,1.3-2.1,2.1-3.6,2.6c-0.6,0.2-1.1,0.4-1.8,0.4c-0.5,0-1,0.1-1.5,0.1c-1.9-0.1-3.8-0.6-5.3-1.7
+c-0.7-0.5-1.3-1-1.7-1.7c-0.2-0.2-0.2-0.4,0.1-0.5c0.3-0.4,0.7-0.8,1-1.1c0.6-0.7,1.2-1.3,1.7-1.9c0.1-0.1,0.2-0.2,0.3-0.3
+c0.2,0.2,0.4,0.4,0.7,0.7c0.9,0.9,1.9,1.4,3.1,1.7c0.5,0.2,1.2,0.1,1.8-0.1c0.5-0.2,0.9-0.5,1.1-0.9c0.3-0.5,0.2-0.9-0.3-1.6
+c-0.4-0.5-1-0.9-1.7-1.3c-1.3-0.7-2.5-1.2-3.7-2c-0.2-0.2-0.4-0.3-0.7-0.4c-0.7-0.6-1.4-1.1-1.8-2c-0.4-0.8-0.7-1.6-0.9-2.4
+s0-1.4,0.2-2.1c0.2-0.8,0.5-1.5,1-2.1c0.6-0.8,1.4-1.5,2.3-1.8c0.6-0.3,1.3-0.4,1.8-0.6c0.8-0.2,1.5-0.2,2.2-0.1
+c0.7,0.1,1.4,0.1,2.1,0.3c0.9,0.3,1.8,0.7,2.5,1.3C159.1,15.3,159.6,15.9,160.2,16.5z" />
+        <ellipse class="st0" cx="139.5" cy="7.9" rx="2.7" ry="2.5" />
+        <rect x="136.9" y="13.8" class="st0" width="5.3" height="21.4" />
+        <path class="st1" d="M7.7,32c-3.2-2.6-4.9-5.9-5.4-10c0.4,0,0.9,0,1.4,0s1,0,1.5,0s1-0.1,1.5,0.1c0.5,0.1,1,0,1.5,0
+c0.2,1.1,0.6,2.2,1.1,3.2s1.4,1.7,2.1,2.6C10.2,29.2,9,30.6,7.7,32z" />
+        <path class="st1" d="M7.6,8.2c1.3,1.4,2.6,2.8,3.9,4.1c-0.8,0.8-1.6,1.6-2.1,2.7c-0.5,1-0.9,2.1-1.1,3.2c-1,0.2-1.9-0.2-2.9-0.1
+s-1.9,0-2.9,0c0-0.3-0.1-0.5,0-0.8c0.4-1.7,0.9-3.4,1.7-4.9C5,10.8,6.2,9.4,7.6,8.2z" />
+        <path class="st2"
+            d="M14.7,4.8c0,1.8,0,3.6,0,5.4c-0.9-1-1.9-2-2.8-2.9c-0.4-0.4-0.7-0.8-1.1-1.3C12.1,5.4,13.4,5.1,14.7,4.8z" />
+        <path class="st2" d="M14.7,30.1c0,1.7,0,3.5,0,5.3c-0.9-0.3-1.8-0.5-2.8-0.8c-0.3-0.1-0.7-0.3-1-0.4c0.4-0.4,0.8-0.9,1.1-1.3
+C13,31.9,13.8,31,14.7,30.1z" />
+        <path class="st3" d="M15.1,24.6c0.1,0.2,0.2,0.4,0.2,0.5c0,1.3,0,2.5,0,3.8c0,0.3-0.1,0.5-0.5,0.4c0-1.5,0-3,0-4.5
+c0-0.1,0.1-0.2,0.2-0.3C15,24.6,15,24.6,15.1,24.6z" />
+        <path class="st1" d="M14.9,17.7c0.3,0.2,0.4,0.3,0.4,0.6c0,1.3,0,2.4,0,3.7c0,0.4,0,0.4-0.5,0.4c0-1.5,0-3,0-4.5
+C14.7,17.9,14.9,17.8,14.9,17.7z" />
+        <path class="st1" d="M14.7,15.4c0-1.5,0-3,0-4.6c0.4,0,0.5,0,0.5,0.4s0,0.9,0,1.4c0,0.8,0,1.6,0,2.5C15.2,15.4,15.2,15.4,14.7,15.4
+z" />
+        <path class="st3" d="M15.3,37.2c0,0.4,0,0.8,0,1.1c0,0.2-0.1,0.4-0.3,0.4s-0.3-0.2-0.3-0.4c0-0.8,0-1.5,0-2.2
+c0-0.2,0.1-0.4,0.3-0.4s0.3,0.2,0.3,0.4C15.3,36.5,15.3,36.8,15.3,37.2z" />
+        <path class="st3" d="M15.1,4.3c-0.3-0.2-0.5-0.4-0.4-0.7c0-0.7,0-1.3,0-2c0-0.1,0-0.2,0-0.3c0.1-0.1,0.2-0.2,0.3-0.2
+s0.2,0.2,0.3,0.3c0.1,0.1,0,0.2,0,0.3c0,0.7,0,1.3,0,1.9C15.2,3.8,15.1,4,15.1,4.3z" />
+        <path class="st4" d="M110,24.3c-0.1,1.7-0.5,3.3-1.8,4.5c-0.9,0.9-2,1.5-3.3,1.6c-1.2,0.2-2.3-0.1-3.3-0.5c-0.8-0.4-1.5-1-2-1.7
+c-0.5-0.8-0.9-1.6-1-2.5c-0.1-0.7-0.3-1.3-0.1-2c0.1-0.5,0.1-1,0.3-1.6c0.2-0.8,0.7-1.4,1.1-2c0.8-1,1.8-1.6,3.1-1.9
+c0.4-0.1,0.8-0.2,1.2-0.1c0.7,0.1,1.4,0.1,2.1,0.4c1.2,0.5,2.2,1.3,2.8,2.4c0.4,0.8,0.8,1.5,0.8,2.4C109.8,23.7,109.9,24,110,24.3z
+" />
+    </g>
+</svg> -->
+                                    <!-- <img src="https://osmosislearn.com/skin/froentend/home/images/logo.png" alt=""> -->
+                                    <img src="/assets/ui-v2/img/osmosis_white_logo.png?v=1.0.43" alt="" width=40%
+                                        style="opacity: 80%;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bab_0321_footer col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                            <div class="float-md-right">
+                                <div class="bab_0321_footer foot_lnk">
+                                    <a href="https://futureverse.osmosislearn.com/contact-us"
+                                        class="text-decoration-none">
+                                        <p>We Love to Hear From You</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bab_0321_footer footer-btm">
+                <div class="bab_0321_footer container">
+                    <div class="scl-cc">
+                        <div class="sccl">
+                        </div>
+                        <div class="ccr">
+                            <!-- © 2023 Osmosis -->
+                            © 2023 Osmosis Learn
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+    </script>
+</body>
+
+</html>w
